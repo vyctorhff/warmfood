@@ -1,6 +1,19 @@
 # warmfood
 Study only: project to help a small establishment to order food
 
-# Tecnologies objetives
+# Tecnologic objectives
 
-# Tecnologies
+# Tecnologic
+
+## Java
+
+- Java 24
+- Quarkus
+
+## Typescript
+
+- Deno
+
+## Golang
+
+- Native libs
