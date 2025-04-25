@@ -1,7 +1,6 @@
 # warmfood
-Study only: project to help a small establishment to order food
 
-# Tecnologic objectives
+Study only: project to help a small establishment to order food
 
 # Tecnologic
 
