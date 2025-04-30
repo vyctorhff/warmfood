@@ -22,28 +22,34 @@ Study only: project to help a small establishment to order food
 ## ms-auth
 
 Micro service for authentication.
-It has only de fields: id, user name, password, token
 
 ### Endpoints
 POST - auth/
-GET - auth/login
+GET  - auth/login
 
 ## ms-user
 
-???
-
 ### Endpoints
 POST - user/
-GET - user/login
-GET - user/perfil/check
+GET  - user/id
+GET  - user/login
+GET  - user/perfil/check
 
 ## ms-food
+???
 ### Endpoints
+GET  - food/meet
+GET  - food/suice
+GET  - food/beans
+GET  - food/optional
 
 ## ms-menu
+???
 ### Endpoints
+GET  - menu/dayli
 
 ## ms-order
+???
 ### Endpoints
 
 
