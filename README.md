@@ -1,6 +1,7 @@
 # warmfood
 
-Study only: project to help a small establishment to order food
+Study only: project to help a small establishment to order food.
+A warmfood is servered in a food box. Usually peoble eat warmfood at work.
 
 # Tecnologic
 
@@ -21,8 +22,6 @@ Study only: project to help a small establishment to order food
 
 ## ms-auth
 
-Micro service for authentication.
-
 ### Endpoints
 POST - auth/
 GET  - auth/login
@@ -33,10 +32,13 @@ GET  - auth/login
 POST - user/
 GET  - user/id
 GET  - user/login
+GET  - user/perfil
 GET  - user/perfil/check
 
 ## ms-food
-???
+
+Micro service for foods in the warmfood
+
 ### Endpoints
 GET  - food/meet
 GET  - food/suice
@@ -44,7 +46,9 @@ GET  - food/beans
 GET  - food/optional
 
 ## ms-menu
-???
+
+
+
 ### Endpoints
 GET  - menu/dayli
 
