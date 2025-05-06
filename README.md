@@ -48,9 +48,12 @@ GET  - food/optional
 ## ms-menu
 
 
-
 ### Endpoints
-GET  - menu/dayli
+POST - menu/next
+PATCH - menu/id/publish
+GET - menu/next/dash
+GET - menu/previous
+
 
 ## ms-order
 ???
