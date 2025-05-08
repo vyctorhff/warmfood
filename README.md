@@ -35,9 +35,8 @@ GET  - user/login
 GET  - user/perfil
 GET  - user/perfil/check
 
-## ms-food
 
-Micro service for foods in the warmfood
+## ms-food
 
 ### Endpoints
 GET  - food/meet
@@ -45,14 +44,14 @@ GET  - food/suice
 GET  - food/beans
 GET  - food/optional
 
+
 ## ms-menu
 
-
 ### Endpoints
-POST - menu/next
+POST  - menu/next
 PATCH - menu/id/publish
-GET - menu/next/dash
-GET - menu/previous
+GET   - menu/next/dash
+GET   - menu/previous
 
 
 ## ms-order
