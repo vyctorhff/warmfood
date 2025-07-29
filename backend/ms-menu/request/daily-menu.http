@@ -1,0 +1,35 @@
+# Study more
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# Shortcut:
+#     Last Request: Ctrl + Alt + K
+
+### Variables 
+@HOST = http://localhost:8080
+@API_URL = /ms-menu
+
+@USERNAME = Bruce Banner
+
+############################################################################
+### 
+@URL_DAILY_MENU = /daily
+
+GET {{API_URL}}{{URL_DAILY_MENU}}/ HTTP/1.1
+
+############################################################################
+### POST greetings
+POST {{API_URL}}/greet HTTP/1.1
+content-type: application/json
+authorization: Bearer ACCESS-TOKEN
+
+{
+   "name":"Steve Rogers",
+   "number":"{{$randomInt 5 200}}",
+   "request_id":"{{$guid}}",
+   "custom_date": "{{$datetime 'YYYY-MM-DD'}}",
+   "user_name":"{{$dotenv USERNAME}}"
+}
+
+############################################################################
+### Delete 
+DELETE {{API_URL}}/remove/1 HTTP/1.1
+Content-Type: application/json
