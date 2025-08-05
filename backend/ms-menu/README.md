@@ -13,3 +13,9 @@ POST  - menu/next
 GET   - menu/next/dash
 GET   - menu/previous
 GET   - menu/daily
+
+
+## Next Steps
+
+- setup spring data
+- test basic request call
