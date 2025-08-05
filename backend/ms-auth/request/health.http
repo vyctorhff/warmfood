@@ -1,0 +1,10 @@
+### Variables 
+@HOST = http://localhost:8081
+
+@USERNAME = Bruce Banner
+
+############################################################################
+### Health
+@URL_HEALTH = /health
+
+GET {{HOST}}{{URL_HEALTH}}/ HTTP/1.1
