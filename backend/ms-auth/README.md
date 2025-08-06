@@ -5,13 +5,9 @@
 POST - auth/
 GET  - auth/login
 
-## deno - temp
+## Next steps
 
-### Run the program
-deno run main.ts
-
-### Run the program and watch for file changes
-deno task dev
-
-### Run the tests
-deno test
+- test jwt implementation
+- add env config
+- add tests
+- refact login usercase
