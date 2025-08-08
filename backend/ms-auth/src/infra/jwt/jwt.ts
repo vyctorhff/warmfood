@@ -7,6 +7,9 @@ import { Logger } from "../../core/usercase/logger.ts";
 const secret = new TextEncoder().encode("secret-very-hard-to-know");// TODO: set env
 const expirationTime = "1h";// TODO: set env
 
+// const secret = new TextEncoder().encode(Deno.env.get('JWT_SECRET'));
+// const expirationTime = Deno.env.get('JWT_TIME_EXPIRATION');
+
 export class JwtSecurity implements EncryptUser {
 
   constructor(private log: Logger) {}

@@ -3,7 +3,7 @@ export type LoginRequest = {
     pass: string,
 }
 
-export type LoginResposne = {
+export type LoginResponse = {
     token: string,
     refresh: string,
     date: Date,
