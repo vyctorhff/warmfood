@@ -1,10 +1,8 @@
 ### Variables 
 @HOST = http://localhost:8081
 
-@USERNAME = Bruce Banner
-
 ############################################################################
-### Login
+# Login
 @URL_LOGIN = /login
 
 POST {{HOST}}{{URL_LOGIN}}/ HTTP/1.1
