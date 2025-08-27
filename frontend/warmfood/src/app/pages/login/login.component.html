@@ -1,0 +1,55 @@
+<header>
+    <h1>Warmfood</h1>
+    <em class="subtitle">Tasty and warm just for you!</em>
+</header>
+
+<main>
+    <form class="login" #form="ngForm">
+        <h2>Get In!</h2>
+
+        <label for="user">
+            User:
+            <input
+                type="text"
+                name="user"
+                placeholder="User"
+                #user="ngModel"
+                [ngModel]="user.value"
+                required
+                />
+        </label>
+
+        <label for="pass">
+            Pass:
+            <input
+                type="password"
+                name="pass"
+                #pass="ngModel"
+                [ngModel]="pass.value"
+                placeholder="Password"
+                />
+        </label>
+
+        <div>
+            <button
+                type="submit"
+                class="btn-add"
+                (click)="login(form)"
+                [disabled]="!form.valid"
+                >
+                I'am hungry!
+            </button>
+
+            <button
+                type="button"
+                (click)="outro()"
+                >
+                Outro
+            </button>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p>&commat; Build for study purposes</p>
+</footer>
