@@ -145,3 +145,5 @@ dist
 # java
 build/
 bin/
+
+.angular/
