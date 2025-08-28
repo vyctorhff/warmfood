@@ -13,7 +13,6 @@ export type UserSession = {
   name: string,
   email: string,
   perfil: Perfil | null,
-  isValid: () => boolean,
   login?: {
     token: string,
     refresh: string,
@@ -34,7 +33,6 @@ export const createUserByLoginAndUser = (loginRequet: LoginResponse, user: GetBy
       refresh: loginRequet.refresh,
     },
     perfil: user.perfil,
-    isValid: () => true,
   };
 }
 
@@ -44,6 +42,13 @@ export const createUserInvalidSession = (): UserSession => {
         name: 'invalid',
         email: 'invalid',
         perfil: null,
-        isValid: () => false,
     };
+};
+
+export const isUserPerfilAdmin = (user: UserSession): boolean => {
+  return Perfil.ADMIN == user.perfil;
+};
+
+export const isUserPerfilUser = (user: UserSession): boolean => {
+  return Perfil.USER == user.perfil;
 };
