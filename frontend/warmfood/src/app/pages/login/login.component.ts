@@ -5,11 +5,13 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { LoginService } from './login.service';
 import { UserService } from '../../services/user.service';
 import { GetByEmailResponse } from '../../model/user.model';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HeaderComponent, FooterComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.less'
 })

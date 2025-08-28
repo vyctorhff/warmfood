@@ -1,7 +1,7 @@
-<header>
-    <h1>Warmfood</h1>
-    <em class="subtitle">Tasty and warm just for you!</em>
-</header>
+<app-header
+    [isShowBtnBack]="false"
+    [isShowMenu]="false"
+    />
 
 <main>
     <form class="login" #form="ngForm">
@@ -39,17 +39,12 @@
                 >
                 I'am hungry!
             </button>
+        </div>
 
-            <button
-                type="button"
-                (click)="outro()"
-                >
-                Outro
-            </button>
+        <div class="btnCreateUser">
+            <a (click)="navToCreateUser()">Create user</a>
         </div>
     </form>
 </main>
 
-<footer>
-    <p>&commat; Build for study purposes</p>
-</footer>
+<app-footer/>
