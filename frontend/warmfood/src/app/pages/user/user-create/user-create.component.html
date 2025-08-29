@@ -1,1 +1,43 @@
-<p>user-create works!</p>
+<app-header/>
+
+<main>
+    <form class="form">
+        <!--
+            fist authentication
+            separete
+            regular user date
+        -->
+        <div class="input-auth">
+            <label for="email">
+                <input type="text" name="email" placeholder="Email" required>
+            </label>
+
+            <label for="pass">
+                <input type="text" name="pass" placeholder="Password" required>
+            </label>
+        </div>
+
+        <label for="name">
+            <input type="text" name="name" placeholder="Name" required>
+        </label>
+
+        <label for="phone">
+            <input type="text" name="phone" placeholder="Phone" required>
+        </label>
+
+        <label for="typeLocation">
+            <input type="radio" name="typeLocation" placeholder="" required>
+            <input type="radio" name="typeLocation" placeholder="" required>
+            <input type="radio" name="typeLocation" placeholder="" required>
+        </label>
+
+        <label for="delivaryTo">
+            <input type="text" name="delivaryTo" placeholder="Delivary To" required>
+        </label>
+
+        <button type="submit" class="btn-create">Create</button>
+        <button type="submit" class="btn-cancel">Cancel</button>
+    </form>
+</main>
+
+<app-footer/>
