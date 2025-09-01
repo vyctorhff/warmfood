@@ -1,0 +1,17 @@
+<header>
+    @if (!isUserLogged) {
+        <div class="notLogged">
+            <h1>Warmfood</h1>
+            <em class="subtitle">Tasty and warm just for you!</em>
+        </div>
+    } @else {
+        <div class="logged">
+            <div class="bntBack">Back!!</div>
+
+            <h1>Warmfood</h1>
+            <em class="subtitle">Tasty and warm just for you!</em>
+
+            <div class="loggoff">Sair</div>
+        </div>
+    }
+</header>
