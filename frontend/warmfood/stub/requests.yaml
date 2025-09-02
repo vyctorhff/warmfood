@@ -57,17 +57,57 @@
         }
 
 # Create - 
+- request:
+  url: ^/user/create$
+  method: POST
+  response:
+    - status: 402
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "message": "Fail to create user"
+        }
+
+- request:
+  url: ^/user/create$
+  method: POST
+  response:
+    - status: 200
 
 ############################################################################
 # ms-menu
 
 - request:
-    url: ^/menu/daily
+  url: ^/menu/daily$
+  method: GET
   response:
-    - status: 400
+    - status: 200
       headers:
         content-type: application/json
-      body: "ainda não"
+      body: >
+        {
+          "meet": [
+            "chicken",
+            "fish"
+          ],
+          "beans": [
+            "white bean",
+            "brown bean"
+          ],
+          "complement": [
+            "rice",
+            "pasta"
+          ],
+          "juices": [
+            "limon",
+            "pinaple"
+          ],
+          "salads": [
+            "tomato, orion and lettuce",
+            "potato with mayonnaise"
+          ],
+        }
 
 ############################################################################
 # 

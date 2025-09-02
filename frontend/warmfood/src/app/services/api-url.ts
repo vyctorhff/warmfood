@@ -1,8 +1,11 @@
-// const msauth = 'http://localhost:8081';
+// const msauth = '';
 const msauth = 'http://localhost:8882';
 
-// const msuser = 'http://localhost:8082';
+// const msuser = '';
 const msuser = 'http://localhost:8882';
+
+// const msmenu = '';
+const msmenu = 'http://localhost:8883';
 
 export const enum ApiLogin {
     AUTH = `${msauth}/auth/login`,
@@ -14,4 +17,6 @@ export const enum ApiUser {
     CREATE = `${msuser}/user/create`
 };
 
-export const enum ApiMenu {};
+export const enum ApiMenu {
+    DAILY = `${msmenu}/menu/daily`,
+};

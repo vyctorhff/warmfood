@@ -1,1 +1,18 @@
-<p>home works!</p>
+<app-header
+    [isShowMenu]="false"
+    [isShowBtnBack]="false"
+    />
+
+<main>
+    <section class="menu-daily">
+        <form class="form" #form="ngForm"></form>
+    </section>
+
+    <section class="operations">
+        <button class="btn btn-user-config">Config</button>
+        <button class="btn btn-add-order">Add</button>
+        <button class="btn btn-cart">Cart</button>
+    </section>
+</main>
+
+<app-footer/>
