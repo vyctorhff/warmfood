@@ -1,42 +1,127 @@
-<app-header/>
+<app-header
+    [isShowBtnBack]="false"
+    [isShowMenu]="false"
+    />
 
 <main>
-    <form class="form">
-        <!--
-            fist authentication
-            separete
-            regular user date
-        -->
-        <div class="input-auth">
-            <label for="email">
-                <input type="text" name="email" placeholder="Email" required>
-            </label>
+    <form class="form" #form="ngForm">
+        <h2>Create your Account</h2>
 
-            <label for="pass">
-                <input type="text" name="pass" placeholder="Password" required>
-            </label>
-        </div>
+        <label for="email">
+            Email:
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                #email="ngModel"
+                [ngModel]="email.value"
+                required
+                />
+        </label>
+
+        <label for="pass" class="pass">
+            Pass:
+            <input
+                type="text"
+                id="pass"
+                placeholder="Password"
+                #pass="ngModel"
+                [ngModel]="pass.value"
+                required
+                />
+        </label>
 
         <label for="name">
-            <input type="text" name="name" placeholder="Name" required>
+            Name:
+            <input
+                type="text"
+                id="name"
+                placeholder="Name"
+                #name="ngModel"
+                [ngModel]="name.value"
+                required
+                />
         </label>
 
         <label for="phone">
-            <input type="text" name="phone" placeholder="Phone" required>
+            Phone:
+            <input
+                type="text"
+                id="phone"
+                placeholder="Phone"
+                #phone="ngModel"
+                [ngModel]="phone.value"
+                required
+                />
         </label>
 
-        <label for="typeLocation">
-            <input type="radio" name="typeLocation" placeholder="" required>
-            <input type="radio" name="typeLocation" placeholder="" required>
-            <input type="radio" name="typeLocation" placeholder="" required>
+        <label for="typeLocation" class="typeLocation">
+            Location:
+            
+            <label>
+                <input
+                    type="radio"
+                    name="typeLocation"
+                    placeholder="Type Location"
+                    value="House"
+                    required
+                    />
+                    House
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="typeLocation"
+                    placeholder="Type Location"
+                    value="Department"
+                    required
+                    />
+                    Department
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="typeLocation"
+                    placeholder="Type Location"
+                    value="Other"
+                    required
+                    />
+                    Other
+            </label>
         </label>
 
         <label for="delivaryTo">
-            <input type="text" name="delivaryTo" placeholder="Delivary To" required>
+            Delivary To:
+            <input
+                type="text"
+                name="delivaryTo"
+                placeholder="Delivary To"
+                required/>
         </label>
 
-        <button type="submit" class="btn-create">Create</button>
-        <button type="submit" class="btn-cancel">Cancel</button>
+        <div class="btns">
+            <button
+                type="submit"
+                class="btn-create"
+                (click)="create(form)"
+                >
+                Create
+            </button>
+
+            <button
+                type="submit"
+                class="btn-cancel"
+                (click)="cancel()"
+                >
+                Cancel
+            </button>
+        </div>
+
+        <div class="msgError">
+            {{ requestErrorMsg() }}
+        </div>
     </form>
 </main>
 
