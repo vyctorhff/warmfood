@@ -31,3 +31,13 @@ Golang
 
 - ms-food
 Java
+
+# Top level arch
+
+gateway -> ms-auth
+        -> ms-menu
+        -> ms-order
+        -> ms-report
+
+        14h -> move the data from day to a history record
+            -> send financial data for financial department
