@@ -1,0 +1,107 @@
+############################################################################
+# ms-auth
+
+- request:
+    url: ^/auth/login$
+    method: POST
+    headers:
+      content-type: application/json
+    body: >
+      {
+        "email": "admin@warmfood.com",
+        "pass": "123"
+      }
+  response:
+    - status: 201
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "token": "aspfj02394ãsjfṽzjsv5f64263442",
+          "refresh": "jfç39lzsmdfl0934u2",
+          "date": "1756148346728"
+        }
+############################################################################
+# ms-user
+
+# GetByEmail - for admin
+- request:
+    url: ^/user/email/admin@warmfood.com$
+    method: GET
+  response:
+    - status: 200
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "id": "1111",
+          "name": "admin name",
+          "email": "admin@warmfood.com",
+          "dateCreated": "1756148346728"
+        }
+
+# GetByEmail - for regular user
+- request:
+    url: ^/user/email/user@warmfood.com$
+    method: GET
+  response:
+    - status: 200
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "id": "1231",
+          "name": "user name",
+          "email": "user@warmfood.com",
+          "dateCreated": "1756148346728
+        }
+
+# Create - 
+- request:
+    url: ^/user/create$
+    method: POST
+  response:
+    - status: 402
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "message": "Fail to create user"
+        }
+
+############################################################################
+# ms-menu
+
+- request:
+    url: ^/menu/daily$
+    method: GET
+  response:
+    - status: 200
+      headers:
+        content-type: application/json
+      body: >
+        {
+          "meet": [
+            "chicken",
+            "fish"
+          ],
+          "beans": [
+            "white bean",
+            "brown bean"
+          ],
+          "complement": [
+            "rice",
+            "pasta"
+          ],
+          "juices": [
+            "limon",
+            "pinaple"
+          ],
+          "salads": [
+            "tomato, orion and lettuce",
+            "potato with mayonnaise"
+          ],
+        }
+
+############################################################################
+# 

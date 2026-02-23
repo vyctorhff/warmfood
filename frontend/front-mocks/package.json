@@ -1,0 +1,15 @@
+{
+  "name": "front-mocks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "mock": "stubby -d ./stub/requests.yaml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "stubby": "^5.1.0"
+  }
+}
