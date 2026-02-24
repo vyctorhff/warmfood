@@ -1,9 +1,9 @@
 {
-  "name": "front-mocks",
+  "name": "mocks",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "mock": "stubby -d ./stub/requests.yaml"
+    "mock": "stubby  -w -d ./stub/requests.yaml"
   },
   "keywords": [],
   "author": "",
